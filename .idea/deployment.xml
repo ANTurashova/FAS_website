@@ -30,6 +30,17 @@
             <excludedPath local="true" path="$PROJECT_DIR$/python" />
             <excludedPath local="true" path="$PROJECT_DIR$/enrollment" />
             <excludedPath local="true" path="$PROJECT_DIR$/templates" />
+            <excludedPath local="true" path="$PROJECT_DIR$/test_movies" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="FAS все без static">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/projects/FAS/FAS_website" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/static" />
           </excludedPaths>
         </serverdata>
       </paths>

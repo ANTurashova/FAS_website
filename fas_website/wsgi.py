@@ -1,3 +1,5 @@
+# Файл для синхронных веб-серверов и приложений
+
 import os
 
 from django.core.wsgi import get_wsgi_application
