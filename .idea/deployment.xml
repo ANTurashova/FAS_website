@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="FAS">
+  <component name="PublishConfigData" serverName="FAS basic">
     <serverData>
-      <paths name="FAS">
+      <paths name="FAS basic">
         <serverdata>
           <mappings>
             <mapping deploy="/projects/FAS/FAS_website" local="$PROJECT_DIR$" web="/" />
@@ -10,6 +10,26 @@
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/db.sqlite3" />
             <excludedPath local="true" path="$PROJECT_DIR$/media" />
+            <excludedPath local="true" path="$PROJECT_DIR$/static" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="FAS static">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/domains/fasschool.ru" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
+            <excludedPath local="true" path="$PROJECT_DIR$/fas_website" />
+            <excludedPath local="true" path="$PROJECT_DIR$/homepage" />
+            <excludedPath local="true" path="$PROJECT_DIR$/media" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.gitignore" />
+            <excludedPath local="true" path="$PROJECT_DIR$/db.sqlite3" />
+            <excludedPath local="true" path="$PROJECT_DIR$/manage.py" />
+            <excludedPath local="true" path="$PROJECT_DIR$/python" />
+            <excludedPath local="true" path="$PROJECT_DIR$/enrollment" />
+            <excludedPath local="true" path="$PROJECT_DIR$/templates" />
           </excludedPaths>
         </serverdata>
       </paths>

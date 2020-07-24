@@ -1,32 +1,36 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
 
 <body>
     <div class="container">
 
         <div class="header">
-            <div><a href="/enrollment">Кнопочка Кости</a></div>
+            <div><a href="/enrollment">Кнопочка для Кости</a></div>
         </div>
 
         <div class="content">
-            <div class="repair">
-                <h1>Закрыты на ремонт. Заходите позже. </h1>
-                <img src={% static "img/vk_group_cover.jpg" %}>
+            <div class="repair" style="text-align: center;">
+                <h3>Закрыто на ремонт. Зайдите позже. </h3>
+                <img src="{% static 'img/vk_group_cover.jpg' %}" class="img-fluid">
             </div>
         </div>
 
         <div class="footer">
-            <hr> &copy;&nbsp;2020 <a href="https://vk.com/fasschool" target="_blank">FAS</a>
+            <hr> 2020 <a href="https://vk.com/fasschool" target="_blank">Free&nbsp;Art&nbsp;School</a>
         </div>
 
     </div>

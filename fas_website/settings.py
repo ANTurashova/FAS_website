@@ -18,8 +18,8 @@ SECRET_KEY = '8q$r-2$itkzp)u)3h=!9dqkeup%ji*)b-8rerc(i%5an6+t$_0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = []                                                                            # /Переключи\
-ALLOWED_HOSTS = ['fasschool.ru']                                                              # \Переключи/
+ALLOWED_HOSTS = []                                                                            # /Переключи\
+#ALLOWED_HOSTS = ['fasschool.ru']                                                              # \Переключи/
 
 
 # Application definition
@@ -113,17 +113,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # сюда будет собирать статику collectstatic  # на сервере не нужна?
-STATIC_DIR = os.path.join(BASE_DIR, 'static')  # Берём папку static  # на сервере не нужна?
-STATICFILES_DIRS = [STATIC_DIR, ]  # Путь к папке static  # на сервере не нужна?
-STATIC_URL = '/static/'  # URL для шаблонов
+STATIC_URL = '/static/'  # Какой URL у статиков
+STATIC_DIR = os.path.join(BASE_DIR, 'static')  # Директория со статикой
+STATICFILES_DIRS = [STATIC_DIR]  # Из каких директорий нужно собирать статику
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# путь до папки media, в общем случае она пуста в начале
 MEDIA_URL = '/media/'  # URL для медии в шаблонах
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# STATICFILES_FINDERS = (  # Непонятно для чего
-#    'django.contrib.staticfiles.finders.FileSystemFinder',
-#    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',  # чтобы заработали статические файлы
-#)
+
