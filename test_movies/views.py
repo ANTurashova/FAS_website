@@ -13,6 +13,10 @@ from .models import Movie, Category, Actor, Genre, Rating, Reviews
 # from .forms import ReviewForm, RatingForm
 
 
+# def Movies(request):  # Просто подключение html странички
+#     return render(request, 'test_movies/movie_list.html')
+
+
 # class GenreYear:
 #     """Жанры и года выхода фильмов"""
 #
@@ -32,37 +36,38 @@ from .models import Movie, Category, Actor, Genre, Rating, Reviews
 #     return ip
 
 
-class MoviesView(View):
-    """Список фильмов"""
-    def get(self, request):
-        movies = Movie.objects.all()  # В переменную movies сохраняем все записи
-        return render(request, "test_movies/movies.html", {"movie_list": movies})  # movie_list = ключ в словаре
-
-
-# def Movies(request):
-#     return render(request, 'test_movies/movies.html')
-
-
-# class MoviesView(GenreYear, ListView):
+# class MoviesView(View):
 #     """Список фильмов"""
-#     model = Movie
-#     queryset = Movie.objects.filter(draft=False)
-#     paginate_by = 1
+#     def get(self, request):
+#         movies = Movie.objects.all()  # В переменную movies сохраняем все записи
+#         return render(request, "test_movies/movie_list.html", {"movie_list": movies})  # movie_list = ключ в словаре
+class MoviesView(ListView):
+    """Список фильмов"""
+    model = Movie  # Модель
+#     queryset = Movie.objects.all()  # Вывод всего
+    queryset = Movie.objects.filter(draft=False)  # draft это черновик из Movie, чернровики же не выводим
+    # template_name : джанго автоматически подставляет суффикс к шаблону. Берёт имя модели "movie" и добавляет "_list"
 
 
-# class MovieDetailView(GenreYear, DetailView):
+# class MovieDetailView(View):
 #     """Полное описание фильма"""
-#     model = Movie
-#     queryset = Movie.objects.filter(draft=False)
-#     slug_field = "url"
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context["star_form"] = RatingForm()
-#         context["form"] = ReviewForm()
-#         return context
-#
-#
+#     def get(self, request, slug):  # Принимает get-запрос, в который передаётсяя request и pk(=некое число из url)
+#         movie = Movie.objects.get(url=slug)  # Делаем запрос в БД, получая 1 запись, у  которрой id сравниваем с pk
+#         return render(request, "test_movies/movie_detail.html", {"movie": movie})
+class MovieDetailView(DetailView):
+    """Полное описание фильма"""
+    model = Movie
+    # queryset = Movie.objects.filter(draft=False)
+    slug_field = "url"
+    # template_name: джанго автоматически подставляет суффикс к шаблону. Берёт имя модели "movie" и добавляет "_detail"
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context["star_form"] = RatingForm()
+    #     context["form"] = ReviewForm()
+    #     return context
+
+
 # class AddReview(View):
 #     """Отзывы"""
 #

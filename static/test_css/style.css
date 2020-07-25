@@ -382,7 +382,8 @@ li > a:only-child:after {
 /*--/banner --*/
 
 .main-banner {
-    background: url(../images/banner.jpg) no-repeat center;
+    background: url(../test_images/banner.jpg) no-repeat center;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -393,7 +394,7 @@ li > a:only-child:after {
 }
 
 .main-banner.inner {
-    background: url(../images/banner.jpg) no-repeat center;
+    background: url(../test_images/banner.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -676,7 +677,7 @@ span.product-new-top {
     position: relative;
     display: block;
     float: right;
-    background: url('../images/star-off-big.png');
+    background: url('../test_images/star-off-big.png');
     background-size: 30px 30px;
 }
 
@@ -686,7 +687,7 @@ span.product-new-top {
     content: '';
     width: 30px;
     height: 30px;
-    background: url('../images/star-on-big.png');
+    background: url('../test_images/star-on-big.png');
     background-size: 30px 30px;
     transition: opacity 0.2s linear;
 }
@@ -887,7 +888,7 @@ ul.w3layouts-box-list li {
 }
 
 .grid-img-right {
-    background: url(../images/single.jpg) no-repeat center;
+    background: url(../test_images/single.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
