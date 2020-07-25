@@ -31,6 +31,7 @@
             <excludedPath local="true" path="$PROJECT_DIR$/enrollment" />
             <excludedPath local="true" path="$PROJECT_DIR$/templates" />
             <excludedPath local="true" path="$PROJECT_DIR$/test_movies" />
+            <excludedPath local="true" path="$PROJECT_DIR$/notebook.txt" />
           </excludedPaths>
         </serverdata>
       </paths>

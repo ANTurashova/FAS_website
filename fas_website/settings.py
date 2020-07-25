@@ -116,8 +116,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'  # Какой URL у статиков
 STATIC_DIR = os.path.join(BASE_DIR, 'static')  # Директория со статикой
-STATICFILES_DIRS = [STATIC_DIR]  # Из каких директорий нужно собирать статику
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [STATIC_DIR]  # Список, из каких директорий нужно собирать статику
 
 MEDIA_URL = '/media/'  # URL для медии в шаблонах
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
