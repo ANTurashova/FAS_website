@@ -13,10 +13,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Пут
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '89$r-2$itkzp)u)3h=!989leup%ji*)b-8rerc(i%5an6+t$_0'                             # |Поменяй|
+SECRET_KEY = '89$r-2iit993)u)3h_!989leup%ji*)b-8rerc(i%5an6+t$_2'                             # |Поменяй|
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # Режим отладки проекта                                                         # |Выключи|
+DEBUG = True                                                                                  # /Переключи\
+#DEBUG = False                                                                                 # \Переключи/
 
 ALLOWED_HOSTS = []                                                                            # /Переключи\
 #ALLOWED_HOSTS = ['fasschool.ru']                                                              # \Переключи/
@@ -116,7 +117,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'  # Какой URL у статиков
 STATIC_DIR = os.path.join(BASE_DIR, 'static')  # Директория со статикой
-STATICFILES_DIRS = [STATIC_DIR]  # Список, из каких директорий нужно собирать статику
+STATICFILES_DIRS = [
+    STATIC_DIR
+]  # Список, из каких директорий нужно собирать статику
 
 MEDIA_URL = '/media/'  # URL для медии в шаблонах
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

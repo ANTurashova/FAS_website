@@ -380,9 +380,9 @@ li > a:only-child:after {
 /* header */
 
 /*--/banner --*/
-
 .main-banner {
-    background: url(../test_images/banner.jpg) no-repeat center;
+    /*background: url(../test_images/banner.jpg) no-repeat center;*/
+    background: url(../img/vk_group_cover.jpg) no-repeat center;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -394,7 +394,8 @@ li > a:only-child:after {
 }
 
 .main-banner.inner {
-    background: url(../test_images/banner.jpg) no-repeat center;
+    /*background: url(../test_images/banner.jpg) no-repeat center;*/
+    background: url(../img/vk_group_cover.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -407,6 +408,12 @@ li > a:only-child:after {
 .bg1 {
     background-color: rgba(0, 0, 0, 0);
     margin-top: 0;
+    background-image: url('../single-post-pic.jpg');
+}
+
+.bg1 {
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 0px;
     background-image: url('../single-post-pic.jpg');
 }
 

@@ -10,7 +10,7 @@ from django.views.generic.base import View
 from django.shortcuts import render, redirect  # redirect поможет перевести пользователя на другую страницу
 
 from .models import Movie, Category, Actor, Genre, Rating, Reviews
-# from .forms import ReviewForm, RatingForm
+from .forms import ReviewForm, RatingForm
 
 
 # def Movies(request):  # Просто подключение html странички
@@ -68,21 +68,28 @@ class MovieDetailView(DetailView):
     #     return context
 
 
-# class AddReview(View):
-#     """Отзывы"""
-#
-#     def post(self, request, pk):
-#         form = ReviewForm(request.POST)
-#         movie = Movie.objects.get(id=pk)
-#         if form.is_valid():
-#             form = form.save(commit=False)
-#             if request.POST.get("parent", None):
-#                 form.parent_id = int(request.POST.get("parent"))
-#             form.movie = movie
-#             form.save()
-#         return redirect(movie.get_absolute_url())
-#
-#
+class AddReview(View):
+    """Класс для отправки отзывов"""
+    def post(self, request, pk):
+        form = ReviewForm(request.POST)  # Используя форму из forms.py и передавая в неё request.POST, Django заполнит форму данными, которые пришли из запроса
+        movie = Movie.objects.get(id=pk)  # Делаем запрос в БД на получение записей и находим фильм по id, получаем объект movie
+        if form.is_valid():  # Проверяем форму на валидность
+            pass
+            form = form.save(commit=False)  # Вызывая метод save и передавая аргумент commit=False мы говорим о том, что хотим приостановить сохранение формы
+                                            # Теперь мы можем внести некие изменения в форму
+            form.movie_id = pk  # В  поле movie нужно указать фильм, к которому нужно привязаться.
+            # Но так как у нас есть только pk(т.е. id фильма), напрямую в "form.movie = pk" мы не можем передать данное число, т.к.
+            # передадим объект фильма. Можем через "_id" указать наше значение. Если глянуть в БД, там как раз есть movie_id.
+            # if request.POST.get("parent", None):
+            #     form.parent_id = int(request.POST.get("parent"))
+            form.movie = movie  # В форме в поле movie присваиваем полученный выше из БД объект movie
+            form.save()  # И теперь запишем в БД форму.
+        # return redirect("/test_movies/")
+        return redirect(movie.get_absolute_url())  # Адрес фильма, чтобы перенаправило на ту же самую страницу, откуда отправился отзыв
+        # print(request.POST)
+
+
+
 # class ActorView(GenreYear, DetailView):
 #     """Вывод информации о актере"""
 #     model = Actor
