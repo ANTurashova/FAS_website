@@ -74,14 +74,14 @@ class AddReview(View):
         form = ReviewForm(request.POST)  # Используя форму из forms.py и передавая в неё request.POST, Django заполнит форму данными, которые пришли из запроса
         movie = Movie.objects.get(id=pk)  # Делаем запрос в БД на получение записей и находим фильм по id, получаем объект movie
         if form.is_valid():  # Проверяем форму на валидность
-            pass
+            # pass
             form = form.save(commit=False)  # Вызывая метод save и передавая аргумент commit=False мы говорим о том, что хотим приостановить сохранение формы
                                             # Теперь мы можем внести некие изменения в форму
-            form.movie_id = pk  # В  поле movie нужно указать фильм, к которому нужно привязаться.
+            # form.movie_id = pk  # В  поле movie нужно указать фильм, к которому нужно привязаться.
             # Но так как у нас есть только pk(т.е. id фильма), напрямую в "form.movie = pk" мы не можем передать данное число, т.к.
             # передадим объект фильма. Можем через "_id" указать наше значение. Если глянуть в БД, там как раз есть movie_id.
-            # if request.POST.get("parent", None):
-            #     form.parent_id = int(request.POST.get("parent"))
+            if request.POST.get("parent", None):  # Ключ parent - это имя поля (родитель), если его нет будет None, если есть:
+                form.parent_id = int(request.POST.get("parent"))  # из поля parent_id (нам нужно именно число _id) достаём значение ключа parent. int делает значение числовым
             form.movie = movie  # В форме в поле movie присваиваем полученный выше из БД объект movie
             form.save()  # И теперь запишем в БД форму.
         # return redirect("/test_movies/")
