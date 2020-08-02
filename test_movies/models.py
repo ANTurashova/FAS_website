@@ -10,7 +10,7 @@ class Category(models.Model):
     description = models.TextField("Описание")
     url = models.SlugField(max_length=160, unique=True)  # unique = уникальный
 
-    def __str__(self):
+    def __str__(self):  # как в админке будут отображаться названия
         return self.name
 
     class Meta:
@@ -25,7 +25,7 @@ class Actor(models.Model):
     description = models.TextField("Описание")
     image = models.ImageField("Изображение", upload_to="test_actors/")
 
-    def __str__(self):
+    def __str__(self):  # как в админке будут отображаться названия
         return self.name
 
     def get_absolute_url(self):
@@ -42,7 +42,7 @@ class Genre(models.Model):
     description = models.TextField("Описание")
     url = models.SlugField(max_length=160, unique=True)
 
-    def __str__(self):
+    def __str__(self):  # как в админке будут отображаться названия
         return self.name
 
     class Meta:
@@ -69,7 +69,7 @@ class Movie(models.Model):
     url = models.SlugField(max_length=130, unique=True)
     draft = models.BooleanField("Черновик", default=False)
 
-    def __str__(self):
+    def __str__(self):  # как в админке будут отображаться названия
         return self.title
 
     def get_absolute_url(self):

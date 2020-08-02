@@ -174,6 +174,7 @@
                             {{ review.text }}
                         </p>
                         <a href="#formReview" onclick="addReview('{{ review.name }}', '{{ review.id }}')">Ответить</a>  <!-- #formReview - id формы, при клике на ссылку будет подниматься к форме отправки отзыва. addReview = передадим имя и id пользователя, которому отвечаем -->
+
                         {% for rew in review.reviews_set.all %}
                             <div class="media mt-5 editContent" style="outline: none; cursor: inherit;">
                                 <a class="pr-3" href="#">
@@ -185,6 +186,7 @@
                                 </div>
                             </div>
                         {% endfor %}
+
                     </div>
                 </div>
             {% endfor %}
@@ -194,7 +196,7 @@
     <script>
         function addReview(name, id) {  <!-- Функция принимает имя и id  -->
             document.getElementById("contactparent").value = id;  <!-- По id находим на странице поле parent, в его атрибут value добляем id, который к нам пришел -->
-            document.getElementById("contactcomment").innerText = `${name}, `  <!-- по id находим поле для отзыва и добавляем в него имя пользователя и запятую -->
+            document.getElementById("contactcomment").innerText = `${name}, `;  <!-- по id находим поле для отзыва и добавляем в него имя пользователя и запятую -->
         }
     </script>
 {% endblock movie %}

@@ -6,3 +6,13 @@
 >annaturaszowa@gmail.com
 Пароль:
 >FAS_Junia30.08
+
+Создать новое приложение:
+>python manage.py startapp имя
+
+Django шаблонизатор 'jinja2'
+
+Создать миграции:
+>python manage.py makemigrations имя_приложения
+Выполнить миграции:
+>python manage.py migrate
