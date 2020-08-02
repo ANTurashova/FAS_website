@@ -16,7 +16,7 @@ from .forms import *
 
 
 # def enrollment(request):  # request это запрос, который поступает из браузера
-#     return render(request, 'enrollment/enrollment.html')
+#     return render(request, 'enrollment/enroll2.html')
 
 
 class Review2View(View):
@@ -24,7 +24,7 @@ class Review2View(View):
 
     def get(self, request):
         reviews2 = Reviews2.objects.all()  # С помощью .objects забираем записи. reviews2 - переменная, куда эти записи сохранили
-        return render(request, "enrollment/enrollment.html", {"reviews2_list": reviews2})  # movie_list = ключ в словаре
+        return render(request, "enrollment/enroll2.html", {"reviews2_list": reviews2})  # movie_list = ключ в словаре
 
 
 class AddReview2(View):
@@ -37,5 +37,18 @@ class AddReview2(View):
             if request.POST.get("parent", None):
                 form.parent_id = int(request.POST.get("parent"))
             form.save()  # И теперь запишем форму в БД.
-        return redirect('/enrollment/')
+        return redirect('/enroll/2/')
 
+
+def Page3View(request):
+    return render(request, 'enrollment/enroll3.html')
+
+
+class AddCourseForm3(View):
+    """"Отправляет форму записи на 3 курс"""
+
+    def post(self, request):
+        form = CourseForm3Form(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/enroll/3/')

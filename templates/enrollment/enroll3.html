@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Запись на курс номер 3</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <div class="container" style="width: 1100px;">
+
+        <div class="header" style="width: 1100px;">
+            ⠀
+        </div>
+
+        <div class="content" style="width: 1100px; padding-left: 25px; padding-right: 25px;">
+            <br>
+            <h3>Запись на курс номер 3</h3>
+            <p>Сегодня дополнительное образование является необходимым условием непрерывного развития человека, его успешности в самореализации и профессиональной карьере.</p>
+            Отдел дополнительного образования ОУ ВО «Южно-Уральский институт управления и экономики»  реализует программы, учитывая проблемы и интересы всех возрастных групп населения.
+            <br>  ⠀
+        </div>
+
+        <div style="height: 300px; width: 1100px; background-image: linear-gradient(180deg, #00B0E2 0%, #BC5DDB 100%);">
+            <div>
+                <div style="float: left;  width: 350px; height: 300px; text-align: right">
+                    <img width="300" height="300" src="https://ligarobotov.online/wp-content/uploads/2020/06/2-tovary-2020-bez-fona-ajti.png">
+                </div>
+                <div style="float: left; width: 150px; height: 300px;">
+                       ⠀⠀
+                </div>
+                <div style="float: left; width: 550px; height: 300px; padding-top: 25px; padding-bottom: 25px; color: white;">
+                    <h4>Цель обучения: освоить необходимые каждому интернет-навыки, с помощью которых можно зарабатывать. </h4>
+                    <br>
+                    <h5>На курсе научимся делать свой сайт, монтировать видео, создавать обложки любимых групп и логотипы игр с помощью растровой и векторной графики. Напишем свой чат-бот, а также создадим приложение для смартфона.</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" style="width: 1100px; padding-left: 25px; padding-right: 25px;">
+            <br>
+            <h3>Вы можете записаться на курсы доп. образования прямо сейчас!</h3>
+
+            <!-- Форма -->
+            <form action="{% url 'add_course_form3' %}" method="post" class="mt-4">
+                {% csrf_token %}
+                <div class="d-sm-flex">
+                    <div class="col-sm-6 p-0">
+                        <label>Имя и фамилия, под которыми Вы записаны в ВК</label>
+                        <input type="text" class="form-control" required="" name="name">
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Ссылка на Ваш профиль ВК</label>
+                        <input type="text" class="form-control" required="" name="link_vk">
+                    </div>
+                </div>
+
+                <label>Почему Вы выбрали этот предмет? Что Вы ждете от курса?</label>
+                <textarea class="form-control" rows="4" name="question1"></textarea>
+
+                <label>Расскажите, что у Вас получается хорошо, а что нет?</label>
+                <textarea class="form-control" rows="4" name="question2"></textarea>
+
+                <button type="submit" class="mt-3 btn btn-success btn-block py-2">
+                    Отправить
+                </button>
+            </form>
+            <!--/Форма -->
+
+            <br>
+        </div>
+
+
+
+        <!-- Footer -->
+        <div class="footer" style="width: 1100px; padding-left: 25px; padding-right: 25px;">
+            <hr>
+            2020 <a href="https://vk.com/fasschool" target="_blank">Free&nbsp;Art&nbsp;School</a>
+            <br>  ⠀
+        </div>
+
+    </div>
+</body>
+</html>

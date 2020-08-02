@@ -15,8 +15,22 @@ class Reviews2(models.Model):
     def __str__(self):  # как в админке будут отображаться названия
         return self.name
 
-
-
     class Meta:
         verbose_name = "Коммент"
         verbose_name_plural = "Комменты"
+
+
+class CourseForm3(models.Model):
+    """Запись на курс 3"""
+
+    link_vk = models.CharField("СсылкаВК", max_length=100)
+    name = models.CharField("Имя", max_length=100)
+    question1 = models.TextField("Вопрос1", max_length=5000)
+    question2 = models.TextField("Вопрос2", max_length=5000)
+
+    def __str__(self):  # как в админке будут отображаться названия
+        return self.name
+
+    class Meta:
+        verbose_name = "Анкета_3"
+        verbose_name_plural = "Анкеты_3"

@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homepage.urls')),  # В папке homepage лежит файл urls
-    path('enrollment/', include('enrollment.urls')),
+    path('enroll/', include('enrollment.urls')),
     path('test_movies/', include('test_movies.urls'))
 ] \
               + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
