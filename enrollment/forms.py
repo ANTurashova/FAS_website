@@ -17,3 +17,11 @@ class CourseForm3Form(forms.ModelForm):
     class Meta:
         model = CourseForm3
         fields = ("name", "link_vk", "question1",  "question2")
+
+
+class SoulOrMindForm(forms.ModelForm):
+    """Анкета души или разума"""
+
+    class Meta:
+        model = CourseForm3
+        fields = ("name", "link_vk")

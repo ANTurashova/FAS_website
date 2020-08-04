@@ -22,7 +22,6 @@ class Reviews2(models.Model):
 
 class CourseForm3(models.Model):
     """Запись на курс 3"""
-
     link_vk = models.CharField("СсылкаВК", max_length=100)
     name = models.CharField("Имя", max_length=100)
     question1 = models.TextField("Вопрос1", max_length=5000)
@@ -34,3 +33,17 @@ class CourseForm3(models.Model):
     class Meta:
         verbose_name = "Анкета_3"
         verbose_name_plural = "Анкеты_3"
+
+
+class SoulOrMind(models.Model):
+    """Анкета распределения на душу и разум"""
+    link_vk = models.CharField("СсылкаВК", max_length=100)
+    name = models.CharField("Имя", max_length=100)
+
+    def __str__(self):  # как в админке будут отображаться названия
+        return self.name
+
+    class Meta:
+        verbose_name = "Анкета_ДvsР"
+        verbose_name_plural = "Анкеты_ДvsР"
+

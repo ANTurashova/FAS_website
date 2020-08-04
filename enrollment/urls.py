@@ -7,4 +7,6 @@ urlpatterns = [
     path('review/2/', views.AddReview2.as_view(), name="add_review2"),
     path('3/', views.Page3View),
     path('review/3/', views.AddCourseForm3.as_view(), name="add_course_form3"),
+    path('soulormind/', views.SoulOrMindView),
+    path('review/soulormind/', views.AddSoulOrMind.as_view(), name="add_soul_or_mind"),
 ]

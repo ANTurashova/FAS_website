@@ -51,4 +51,18 @@ class AddCourseForm3(View):
         form = CourseForm3Form(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/enroll/3/')
+        return redirect('/enroll/soulormind/')
+
+
+def SoulOrMindView(request):
+    return render(request, 'enrollment/soul_or_mind.html')
+
+
+class AddSoulOrMind(View):
+    """"Отправляет форму распределения на душу и разум"""
+
+    def post(self, request):
+        form = SoulOrMindForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return redirect('/')

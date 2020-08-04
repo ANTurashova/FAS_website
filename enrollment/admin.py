@@ -4,3 +4,5 @@ from .models import *
 admin.site.register(Reviews2)
 
 admin.site.register(CourseForm3)
+
+admin.site.register(SoulOrMind)
