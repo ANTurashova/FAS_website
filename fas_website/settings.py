@@ -8,19 +8,17 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Путь к корню проекта
 
-
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'gbkhkfhzjm4545gsrg564sfkl_jkn*jkjk54'                             # |Поменяй|
+SECRET_KEY = 'gbkhkfhzjm4545gsrg564sfkl_j6456sf455ds46dkn*jkjk54'                                            # |Поменяй|
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True                                                                                  # /Переключи\
-#DEBUG = False                                                                                 # \Переключи/
+DEBUG = True                                                                                             # /Переключи\
+# DEBUG = False                                                                                            # \Переключи/
 
-ALLOWED_HOSTS = []                                                                            # /Переключи\
-#ALLOWED_HOSTS = ['fasschool.ru']                                                              # \Переключи/
+ALLOWED_HOSTS = []                                                                                        # /Переключи\
+# ALLOWED_HOSTS = ['fasschool.ru']                                                                         # \Переключи/
 
 
 # Application definition
@@ -34,7 +32,6 @@ INSTALLED_APPS = [  # Какие приложения активны в наше
     'django.contrib.staticfiles',
 
     'homepage',
-    'test_movies',
     'enrollment',
 ]
 
@@ -70,7 +67,6 @@ WSGI_APPLICATION = 'fas_website.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {  # Настройки для всех баз данных проекта
     'default': {
@@ -81,7 +77,6 @@ DATABASES = {  # Настройки для всех баз данных прое
 
 
 # Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -100,7 +95,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGE_CODE = 'ru'
 
@@ -114,13 +108,12 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'  # Какой URL у статиков
 STATIC_DIR = os.path.join(BASE_DIR, 'static')  # Директория со статикой
-STATICFILES_DIRS = [
-    STATIC_DIR
-]  # Список, из каких директорий нужно собирать статику
+STATICFILES_DIRS = [STATIC_DIR]  # Список, из каких директорий нужно собирать статику
+# STATIC_ROOT = '/home/users/a/annaturaszowa/projects/FAS/FAS_website/static/'                 #|Отключи при разработке|
+
 
 MEDIA_URL = '/media/'  # URL для медии в шаблонах
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

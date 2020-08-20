@@ -8,16 +8,16 @@
             <mapping deploy="/projects/FAS/FAS_website" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/db.sqlite3" />
             <excludedPath local="true" path="$PROJECT_DIR$/media" />
             <excludedPath local="true" path="$PROJECT_DIR$/static" />
+            <excludedPath local="true" path="$PROJECT_DIR$/db.sqlite3" />
           </excludedPaths>
         </serverdata>
       </paths>
       <paths name="FAS static">
         <serverdata>
           <mappings>
-            <mapping deploy="/domains/fasschool.ru" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/projects/FAS/FAS_website/static" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/.idea" />

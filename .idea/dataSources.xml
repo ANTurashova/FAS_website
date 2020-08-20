@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="FAS2_db" uuid="10d29fb4-687f-4d9d-aa34-c861831f4e7f">
+    <data-source source="LOCAL" name="db.sqlite3" uuid="673ab1f9-1af0-4b13-962a-0ce08b3e87c3">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db.sqlite3</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="123" uuid="4345620c-b627-4069-b434-8910fd72ad61">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$USER_HOME$/Downloads/db.sqlite3</jdbc-url>
     </data-source>
   </component>
 </project>
