@@ -17,8 +17,8 @@ SECRET_KEY = 'gbkhkfhzjm4545gsrg564sfkl_j6456sf455ds46dkn*jkjk54'               
 DEBUG = True                                                                                             # /Переключи\
 # DEBUG = False                                                                                            # \Переключи/
 
-ALLOWED_HOSTS = []                                                                                        # /Переключи\
-# ALLOWED_HOSTS = ['fasschool.ru']                                                                         # \Переключи/
+# ALLOWED_HOSTS = []                                                                                        # /Переключи\
+ALLOWED_HOSTS = ['fasschool.ru']                                                                         # \Переключи/
 
 
 # Application definition
@@ -50,7 +50,8 @@ ROOT_URLCONF = 'fas_website.urls'  # Модуль, который содержи
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+#         'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -17,22 +17,8 @@
       <paths name="FAS static">
         <serverdata>
           <mappings>
-            <mapping deploy="/projects/FAS/FAS_website/static" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/projects/FAS/FAS_website/static" local="$PROJECT_DIR$/static" web="/" />
           </mappings>
-          <excludedPaths>
-            <excludedPath local="true" path="$PROJECT_DIR$/.idea" />
-            <excludedPath local="true" path="$PROJECT_DIR$/fas_website" />
-            <excludedPath local="true" path="$PROJECT_DIR$/homepage" />
-            <excludedPath local="true" path="$PROJECT_DIR$/media" />
-            <excludedPath local="true" path="$PROJECT_DIR$/.gitignore" />
-            <excludedPath local="true" path="$PROJECT_DIR$/db.sqlite3" />
-            <excludedPath local="true" path="$PROJECT_DIR$/manage.py" />
-            <excludedPath local="true" path="$PROJECT_DIR$/python" />
-            <excludedPath local="true" path="$PROJECT_DIR$/enrollment" />
-            <excludedPath local="true" path="$PROJECT_DIR$/templates" />
-            <excludedPath local="true" path="$PROJECT_DIR$/test_movies" />
-            <excludedPath local="true" path="$PROJECT_DIR$/notebook.txt" />
-          </excludedPaths>
         </serverdata>
       </paths>
       <paths name="FAS все без static">
@@ -43,6 +29,13 @@
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/static" />
           </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="FAS всё">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/projects/FAS/FAS_website" local="$PROJECT_DIR$" web="/" />
+          </mappings>
         </serverdata>
       </paths>
     </serverData>

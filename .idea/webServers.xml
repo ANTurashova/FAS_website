@@ -23,6 +23,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="ee4fc986-61f5-4e9f-a962-6e6b0961a30a" name="FAS всё" url="http://fasschool.ru">
+        <fileTransfer rootFolder="/home/users/a/annaturaszowa" accessType="SFTP" host="fasschool.ru" port="22" sshConfigId="21792eaa-6196-431b-8c89-5281238e8e21" sshConfig="annaturaszowa@fasschool.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

@@ -1,42 +1,286 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-</head>
-
-<body>
-    <div class="container">
-
-        <div class="header">
-            <div> |
-                <a href="/enroll/2/">Кнопочка для Кости</a> |
-                <a href="/enroll/3/">Кнопочка курса</a> |
-                <a href="/test_movies">Кнопочка тестируемого проекта</a> |
+<html lang="ru-RU">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>Главная</title>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="base">
+            <div class="nav box">
+                <div class="nav-left">
+                    <span>ART SCHOOL</span>
+                </div>
+                <div class="nav-center">
+                    <a href="">Главная</a>
+                    <a href="">Анкета</a> 
+                    <a href="">Вконтакте</a> 
+                </div>
+                <div class="nav-right">
+                    <span>FAS</span>
+                </div>
             </div>
-        </div>
-
-        <div class="content">
-            <div class="repair" style="text-align: center;">
-                <h3>Закрыто на ремонт. Зайдите позже. </h3>
-                <img src="{% static 'img/vk_group_cover.jpg' %}" class="img-fluid">
+            <div class="topnav">
+              <a href="#" class="active">ART SCHOOL</a>
+              <div id="myLinks">
+                <a href="">Главная</a>
+                <a href="">Анкета</a>
+                <a href="">Вконтакте</a>
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
             </div>
+            <div class="header">
+            </div>
+            <div class="name"><h2>Факультеты</h2></div>
+            <div class="courses box">
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Основы художественного текста</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Основы журналистики</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Остросюжетная литература</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Создание диалогов</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текстик.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>    
+                    <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Персонажи</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Фэнтези</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Корректура</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Поэзия</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Портрет</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текстик.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Анатомический челлендж</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Ежедневное рисование </h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Ежедневное писательство</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+                
+                <div class="cours">
+                    <img src="{% static 'img/2.jpg' %}" alt="course">
+                    <h3>Теория музыки</h3>
+                    <span>
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                        Тут какой-то текст.
+                    </span><br><br>
+                    <a href=""><button class="but">подробнее</button></a>
+                </div>
+            </div>
+            <div class="name"><h2>Чем мы отличаемся от других</h2></div>
+            <div class="info box">
+                <div class="info-left">
+                    <span>
+                        <b>Удобный формат обучения</b> <br>
+                        <p>Обучение в удобном онлайн-формате с получением поддержки и обратной связи от преподавателя на протяжении всего курса.</p> <br>
+                        <br>
+                        <b>Мотивирующие соревнования</b> <br>
+                        <p>Добровольное участие в соревновании с другими студентам разных курсов и факультетов, которое подтолкнет вас на усердную креативную работу!</p> <br>
+                        <br>
+                        <b>Живое и интересное общение</b> <br>
+                        <p>Общие беседы со студентами и преподавателями разных направлений и курсов. Обсудите необычные идеи, поделитесь опытом, соберитесь вместе для будущих творческих успехов.</p> <br>
+                        <br>
+                        <b>Мультипрофильность</b> <br>
+                        <p>Курсы для художников, писателей, поэтов и даже музыкантов имеются в нашей школе. Выбирайте и творите!</p>
+                    </span>
+                </div>
+                <div class="info-right box">
+                    <div class="inf">
+                        <div class="left_1">
+                            <img src="{% static 'img/1.jpg' %}" alt="photo" width="100%">
+                        </div>
+                        <div class="right_1">
+                            <span>
+                                 <b>Активности и конкурсы</b> <br>
+                                 <p>Участвуйте в творческих конкурсах и столкнитесь с креативными идеями других участников. Примените новоприобретенные навыки и заслужите свои призы.</p> <br>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="inf_2">
+                        <div class="left_2">
+                            <span>
+                            <b>Теория и практика</b> <br>
+                                <p>Теория на живых вебинарах с практическими заданиями для закрепления полученных знаний.</p> <br>
+                            </span> <br> <br>
+                        </div>
+                        <div class="right_2">
+                            <img src="{% static 'img/1.jpg' %}" alt="photo" width="100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="name"><h2>Календарь обучения</h2></div>
+            <div class="table">
+                <table>
+                    <tr>
+                        <td>
+                            <span class="text_2">31.08 – 1.10</span><br>
+                            <span class="text">подача заявок и прохождение вступительных испытаний</span>
+                        </td>
+                        <td>
+                            <span class="text_2">2.10 - 4.10</span><br>
+                            <span class="text">добавление учащихся в беседы</span>
+                        </td>
+                        <td>
+                            <span class="text_2">5.10 – 1.11</span><br>
+                            <span class="text">первый учебный семестр</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="text_2">2.11 – 8.11</span><br>
+                            <span class="text">контрольная неделя для сдачи всех долгов</span>
+                        </td>
+                        <td>
+                            <span class="text_2">9.11 – 6.12</span><br>
+                            <span class="text">второй учебный семестр</span>
+                        </td>
+                        <td>
+                            <span class="text_2">7.12 – 13.12</span><br>
+                            <span class="text">экзаменационная неделя</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer">
+                <span> Lorem ipsum dolor sit amet, consectetur adipisicing © FAS</span>
+            </div>
+            {% block extrahead %}
+            <script>
+                function myFunction() {
+                  var x = document.getElementById("myLinks");
+                  if (x.style.display === "block") {
+                    x.style.display = "none";
+                  } else {
+                    x.style.display = "block";
+                  }
+                }
+            </script>
+            {% endblock extrahead %}
         </div>
-
-        <div class="footer">
-            <hr> 2020 <a href="https://vk.com/fasschool" target="_blank">Free&nbsp;Art&nbsp;School</a>
-        </div>
-
-    </div>
-</body>
+    </body>
 </html>
