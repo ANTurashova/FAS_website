@@ -2,14 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="a4fefcd7-d8d9-4db6-8228-734f5922b9c1" name="FAS basic" url="http://fasschool.ru">
-        <fileTransfer rootFolder="/home/users/a/annaturaszowa" accessType="SFTP" host="fasschool.ru" port="22" sshConfigId="21792eaa-6196-431b-8c89-5281238e8e21" sshConfig="annaturaszowa@fasschool.ru:22 password">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
-      </webServer>
-      <webServer id="17b7490b-eaa2-4db8-b3ce-39451fd772cd" name="FAS static" url="http://fasschool.ru">
+      <webServer id="a4fefcd7-d8d9-4db6-8228-734f5922b9c1" name="FAS basic без media, static, db" url="http://fasschool.ru">
         <fileTransfer rootFolder="/home/users/a/annaturaszowa" accessType="SFTP" host="fasschool.ru" port="22" sshConfigId="21792eaa-6196-431b-8c89-5281238e8e21" sshConfig="annaturaszowa@fasschool.ru:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

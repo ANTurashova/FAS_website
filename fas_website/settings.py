@@ -11,11 +11,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Пут
 # Quick-start development settings - unsuitable for production
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'gbkhkfhzjm4545gsrg564sfkl_j6456sf455ds46dkn*jkjk54'                                            # |Поменяй|
+SECRET_KEY = 'gbkhkfhsrg564sfdfjisd8s9kl_j6456sf455ds46dkn*jkjk54'                                            # |Поменяй|
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True                                                                                             # /Переключи\
-# DEBUG = False                                                                                            # \Переключи/
+# DEBUG = True                                                                                             # /Переключи\
+DEBUG = False                                                                                            # \Переключи/
 
 # ALLOWED_HOSTS = []                                                                                        # /Переключи\
 ALLOWED_HOSTS = ['fasschool.ru']                                                                         # \Переключи/

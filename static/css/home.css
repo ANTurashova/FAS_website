@@ -59,13 +59,15 @@ body {
     }
     .cours {
         width: 20%;
-        height: 100%;
         margin: 10px;
         background-color: white;
         padding: 10px;
     }
     .cours img {
         width: 100%;
+    }
+    .bhight {
+        height: 220px;
     }
     .but {
         background-color: #bc85ff;
@@ -99,13 +101,16 @@ body {
         background-color: white;
         border-left: 4px solid #6e9adb;
         margin-right: 15px;
+        height: 580px;
     }
     .info-right {
-        width: 49%;
+        width: 48%;
+        height: 580px;
     }
     .left_1, .left_2, .right_1, .right_2 {
         padding: 15px;
         background-color: white;
+        height: 290px;
     }
     .left_2 {
         border-top: 4px solid #6e9adb;
@@ -118,7 +123,7 @@ body {
         margin-right: 15px;
     }
     .inf_2 {
-        width: 49%;
+        width: 48%;
     }
     .name {
         text-align: center;
@@ -138,6 +143,9 @@ body {
         border: 3px solid #6e9adb;
         padding: 5px;
         background-color: white;
+    }
+    .table td {
+        width: 33%;
     }
     .footer {
         height: auto;
@@ -160,17 +168,70 @@ body {
     .topnav {
         display: none;
     }
-
-    
     @media only screen and (max-width: 1020px) {
         .cours {
+            width: 32%;
+            margin: 5px;
+        }
+        .courses {
+            width: 100%;
+        }
+        .cours img {
+            width: 100%;
+            /*height: 100%;*/
+        }
+        .info-left {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: white;
+            border-left: 3px solid #6e9adb;
+            margin-bottom: 10px;
+            margin-right: 0;
+            height: 610px;
+        }
+        .info-right {
+            width: 100%;
+            height: 610px;
+        }
+        .info {
+            width: 100%;
+        }
+        .inf {
+            margin-right: 10px;
+        }
+        .left_1, .left_2, .right_1, .right_2 {
+            padding: 15px;
+            background-color: white;
+            height: 305px;
+        }
+        .nav-left, .nav-right {
+            width: 20%;
+            text-align: center;
+            font-size: 18px;
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            color: #00B0E2;
+        }
+        .nav-center, a {
+            width: 60%;
+            text-align: center;
+            font-size: 18px;
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            color: #00B0E2;
+            text-decoration: none;
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .cours {
             width: 45%;
-            height: 100%;
             margin: 5px;
         }
         .cours img {
             width: 100%;
-            height: 100%;
+            /*height: 100%;*/
         }
         .courses {
             width: 100%;
@@ -196,9 +257,11 @@ body {
             border-left: 3px solid #6e9adb;
             margin-bottom: 10px;
             margin-right: 0;
+            height: 610px;
         }
         .info-right {
             width: 100%;
+            height: 610px;
         }
         .info {
             width: 100%;
@@ -209,6 +272,7 @@ body {
         .left_1, .left_2, .right_1, .right_2 {
             padding: 15px;
             background-color: white;
+            height: 305px;
         }
         .left_1, .right_1 {
             margin-right: 5px;
@@ -230,6 +294,9 @@ body {
             text-align: center;
             margin: auto;
             border-collapse: collapse;
+        }
+        .table td {
+            width: 33%;
         }
         .table {
             width: 100%;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="FAS basic">
+  <component name="PublishConfigData" serverName="FAS basic без media, static, db">
     <serverData>
-      <paths name="FAS basic">
+      <paths name="FAS basic без media, static, db">
         <serverdata>
           <mappings>
             <mapping deploy="/projects/FAS/FAS_website" local="$PROJECT_DIR$" web="/" />
@@ -12,13 +12,6 @@
             <excludedPath local="true" path="$PROJECT_DIR$/static" />
             <excludedPath local="true" path="$PROJECT_DIR$/db.sqlite3" />
           </excludedPaths>
-        </serverdata>
-      </paths>
-      <paths name="FAS static">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/projects/FAS/FAS_website/static" local="$PROJECT_DIR$/static" web="/" />
-          </mappings>
         </serverdata>
       </paths>
       <paths name="FAS все без static">
